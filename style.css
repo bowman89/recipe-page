@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+/*  root  */ 
+:root {
+
+/* font */
+    --ff-main: "Outfit";
+    --ff-serif: "Young serif";
+
+    --fs-serif-40px: 40px;
+    --fs-serif-28px: 28px;
+    --fs-outfit-20px: 20px;
+    --fs-outfit-16px: 16px;
+  
+    --lh-serif-100: 100%;
+    --lh-outfit-150: 150%;
+
+    --ls: 0px;
+
+    --fw-serif-400: 400;
+    --fw-outfit-400: 400;
+    --fw-outfit-600: 600;
+    --fw-outfit-700: 700;
+
+
+/*  Colors   */
+    --White: #ffffff;
+
+    --Stone-100: #f3e5d7;
+    --Stone-150: #e4ded8;
+    --Stone-600: #5f574e;
+    --Stone-900: #302d2c;
+    
+    --Brown-800: #854632;
+    
+    --Rose-800: #7b284f;
+    --Rose-50: #fff5fa;
+
+
+/*  Spacing  */
+
+    --sp-1600-128px: 128px;
+    --sp-600-48px: 48px;
+    --sp-500-40px: 40px;
+    --sp-400-32px: 32px;
+    --sp-300-24px: 24px;
+    --sp-200-16px: 16px;
+    --sp-150-12px: 12px;
+    --sp-100-8px: 8px;
+}
+
+
+/*  reset */ 
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    font-family: var(--ff-main);
+    font-weight: var(--fw-outfit-400);
+    font-size: var(--fs-outfit-16px);
+    line-height: 150%;
+    color: var(--Stone-600);
+    background-color: var(--Stone-100);
+    height: 100vh;
+    
+}
+
+ul{
+    padding-left: 0;
+    margin-left: 0;
+    list-style-position: inside;
+    list-style: none;
+}
+
+li {
+    margin-left: 0;
+}
+
+ul li {
+    display: flex; 
+    align-items: center; 
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+
+h1,
+h2,
+h3,
+p{
+    letter-spacing: 0px;
+}
+
+h1,
+h2 {
+    font-family: var(--ff-serif);
+    line-height: var(--lh-serif-100);
+    font-weight: var(--fw-serif-400);
+}
+
+h3,
+p{
+    font-family: var(--ff-main);
+}
+
+p {
+    font-weight: var(--fw-outfit-400);
+    color: var(--Stone-600);
+}
+
+h1{
+    font-size: var(--fs-serif-40px);
+    color: var(--Stone-900);
+}
+
+h2{
+    color: var(--Brown-800);
+    font-size: var(--fs-serif-28px);
+}
+
+h3{
+    font-size: var(--fs-outfit-20px);
+    color: var(--Rose-800);
+}
+
+.regular{
+    font-size: var(--fs-outfit-16px);
+    line-height: var(--lh-outfit-150);
+ 
+}
+
+.semi-bold{
+    font-size: var(--fs-outfit-20px);
+    line-height: var(--lh-serif-100);
+}
+
+.bold{
+    font-weight: var(--fw-outfit-700) !important;
+    color: var(--Stone-600);
+}
+
+
+.r_gap--128{
+    margin-bottom: var(--sp-1600-128px);
+}
+
+.r_gap--48{
+    margin-bottom: var(--sp-600-48px);
+}
+
+.r_gap--40{
+    margin-bottom: var(--sp-500-40px);
+}
+
+.r_gap--32{
+    margin-bottom: var(--sp-400-32px);
+}
+
+.r_gap--24{
+    margin-bottom: var(--sp-300-24px);
+}
+
+.r_gap--16{
+    margin-bottom: var(--sp-200-16px);
+}
+
+.r_gap--12{
+    margin-bottom: var(--sp-150-12px);
+}
+
+.r_gap--8{
+    margin-bottom: var(--sp-100-8px);
+}
+
+.divider{
+    border: 0;
+    border-top: 1px solid var(--Stone-150);
+    margin: var(--sp-300-24px) 0;
+    width: 100%;
+}
+
+/* main styling*/
+.card{
+    width: 736px;
+    height: auto;
+    background-color: var(--White);
+    border-radius: 24px;
+    padding: var(--sp-500-40px);  
+}
+
+.omelette-img{
+    border-radius: 12px;
+
+}
+
+/*--- Preperation ---*/
+.preparation{
+    background-color: var(--Rose-50);
+    padding: var(--sp-300-24px);
+    border-radius: 12px;
+}
+
+.preparation ul li::before {
+    content: "•";
+    width: 16px;
+    height: 24px;
+    font-size: 24px;
+    margin-right: var(--sp-200-16px);
+    color: var(--Rose-800);
+}
+
+.preparation ul li {
+    padding-left: var(--sp-100-8px);
+}
+
+/*--- Ingredients ---*/
+.ingredients ul li::before {
+    content: "•";
+    width: 16px;
+    height: 24px;
+    font-size: 24px;
+    color: var(--Brown-800);
+    margin-right: var(--sp-200-16px);
+}
+
+.ingredients ul li {
+    padding-left: var(--sp-100-8px);
+}
+
+/*--- Instructions ---*/
+.step-list {
+    margin: 0;
+    padding: 0;
+    counter-reset: step-counter;
+  }
+
+.step-list li{
+    text-indent: ;
+}
+
+.step-list > li{
+    counter-increment: step-counter;
+    list-style: none;
+    margin-bottom: var(--sp-100-8px);
+    padding-left: var(--sp-100-8px);
+    text-indent: ;
+}
+
+.step-list > li strong{
+    display: inline;
+}
+
+.step-list > li:last-child{
+    margin-bottom: 0;
+}
+
+.step-list > li::before{
+    content: counter(step-counter) ".";
+    display: inline-block;
+    width: 16px;
+    height: 24px;
+    font-weight: var(--fw-outfit-700);
+    color: var(--Brown-800);
+    margin-right: var(--sp-200-16px);   
+}
+
+
+
+  
+
+
