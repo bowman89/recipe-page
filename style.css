@@ -248,6 +248,5 @@ h3{
 .step-list {
     margin: 0;
     padding: 0;
-    counter-reset: step-counter;
-    list-style-position: outside;
   }
+
