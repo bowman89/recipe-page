@@ -249,40 +249,5 @@ h3{
     margin: 0;
     padding: 0;
     counter-reset: step-counter;
+    list-style-position: outside;
   }
-
-.step-list li{
-    text-indent: ;
-}
-
-.step-list > li{
-    counter-increment: step-counter;
-    list-style: none;
-    margin-bottom: var(--sp-100-8px);
-    padding-left: var(--sp-100-8px);
-    text-indent: ;
-}
-
-.step-list > li strong{
-    display: inline;
-}
-
-.step-list > li:last-child{
-    margin-bottom: 0;
-}
-
-.step-list > li::before{
-    content: counter(step-counter) ".";
-    display: inline-block;
-    width: 16px;
-    height: 24px;
-    font-weight: var(--fw-outfit-700);
-    color: var(--Brown-800);
-    margin-right: var(--sp-200-16px);   
-}
-
-
-
-  
-
-
